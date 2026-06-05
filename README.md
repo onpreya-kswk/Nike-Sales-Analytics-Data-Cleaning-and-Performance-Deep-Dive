@@ -16,4 +16,4 @@ The goal here was to move everything from `"Nike_Sales_Uncleaned"` into a clean,
 * **Casting Text to Proper Numbers:** Numeric fields like `"Units_Sold"`, `"MRP"`, and `"Profit"` were imported as text and contained empty strings. I used `CASE WHEN` combined with `trim(...) = ''` to catch those hidden spaces, converted them to `0`, and then cast them into proper `numeric` formats so we can actually run math functions on them later.
 * **Untangling Messy Date Formats:** The `"Order_Date"` column was a mix of different formats (`DD/MM/YYYY` and `DD-MM-YYYY`). To fix this, I used pattern matching (`LIKE '__/__/____'`) to identify the format first, converted it using `TO_DATE`, and then used `TO_CHAR` to lock every single row into a clean, uniform ISO standard (`YYYY-MM-DD`). Anything that couldn't be parsed got flagged with a default fallback date of `'1900-01-01'`.
  
-## Step 2: Data Cleaning & Transformation
+## Step 2: 
