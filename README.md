@@ -10,17 +10,10 @@ Link : https://www.kaggle.com/datasets/nayakganesh007/nike-sales-uncleaned-datas
 ---
 
 ## 🛠️ Step 1: Data Cleaning & Transformation
-The first step was to move data from `"Nike_Sales_Uncleaned"` into a new, optimized table called `"Nike_Sales_Cleaned"`. Here is a breakdown of how I handled the dirty data:
+The goal here was to move everything from `"Nike_Sales_Uncleaned"` into a clean, structured table called `"Nike_Sales_Cleaned"`. The raw data had quite a few data quality issues, so I used this SQL script to standardize the columns:
 
-* **Fixing Missing Values:** 
-  * Used `COALESCE` to replace blank fields (e.g., set empty sizes to `'No Size'` and missing numbers to `0`).
-  * Filtered out useless rows where `"Order_ID"` was missing entirely to keep the data clean.
-* **Fixing Data Types:** 
-  * Converted text columns into proper numeric formats (like `numeric(10,1)` for units sold and `numeric(10,2)` for profit) so they are ready for math calculations.
-  * Used `CASE WHEN` combined with `trim(...) = ''` to catch empty strings and hidden spaces that usually break queries.
-* **Standardizing Dates:**
-  * The original dataset had messy date formats mixed together (`DD/MM/YYYY` and `DD-MM-YYYY`). 
-  * I used pattern matching (`LIKE`) to detect the format, then used `TO_DATE` and `TO_CHAR` to force everything into the standard `YYYY-MM-DD` format. 
-  * Set a fallback date of `'1900-01-01'` for any unfixable or missing dates.
+* **Handling Blank and Null Values:** I used `COALESCE` to quickly patch up missing data, like setting empty sizes to `'No Size'` and unrecorded revenue/regions to fallback defaults. I also added a `WHERE "Order_ID" IS NOT NULL` filter at the bottom because any transaction without an order ID is useless for analysis.
+* **Casting Text to Proper Numbers:** Numeric fields like `"Units_Sold"`, `"MRP"`, and `"Profit"` were imported as text and contained empty strings. I used `CASE WHEN` combined with `trim(...) = ''` to catch those hidden spaces, converted them to `0`, and then cast them into proper `numeric` formats so we can actually run math functions on them later.
+* **Untangling Messy Date Formats:** The `"Order_Date"` column was a mix of different formats (`DD/MM/YYYY` and `DD-MM-YYYY`). To fix this, I used pattern matching (`LIKE '__/__/____'`) to identify the format first, converted it using `TO_DATE`, and then used `TO_CHAR` to lock every single row into a clean, uniform ISO standard (`YYYY-MM-DD`). Anything that couldn't be parsed got flagged with a default fallback date of `'1900-01-01'`.
  
 ## 🛠️ Step 2: Data Cleaning & Transformation
