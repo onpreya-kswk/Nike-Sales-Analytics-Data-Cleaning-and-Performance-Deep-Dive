@@ -6,7 +6,7 @@ I built this project to clean, structure, and analyze a raw Nike sales dataset. 
 
 ## 📁 Data Source
 The raw transaction data comes from **Kaggle**. It tracks global Nike product sales, but required a major cleanup before it could be used for any meaningful analysis.
-
+Link : https://www.kaggle.com/datasets/nayakganesh007/nike-sales-uncleaned-dataset
 ---
 
 ## 🛠️ Step 1: Data Cleaning & Transformation
