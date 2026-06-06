@@ -23,4 +23,17 @@ By plotting a Scatter Plot and splitting them by Sales Channel, the visualizatio
 * **Retail holds up better under pressure:** The orange trend line drops at a much gentler slope. Even when we hand out steep discounts at physical stores, the average profit stays relatively steady and finishes way ahead of the online channel. This suggests our brick-and-mortar setups might be passing the buck through multi-item sales or handling overhead costs better during promotions.
 * **The data is all over the place:** Beyond the main trends, the points are scattered all over the map. Even around the 50% to 70% discount mark, some orders still rack up over 3,500 in profit, while others plummet straight into the negatives. This tells us the discount isn't the only driver—it depends heavily on *what* product lines we are clearing out, since high-margin items can easily absorb the blow.
 
-* 
+## Step 3-1: Product performance by gender
+I pulled together this chart in Tableau to break down how our main product lines stack up when it comes to total revenue. Instead of piling everything into a single massive bar, mapping out the gender categories side-by-side inside each product block lets us scan through the catalog and see exactly who is driving our sales.
+
+Here are the major business takeaways that jump out from the data:
+
+* **Training Gear for Men is the Top Cash Cow:** The absolute winner in this dataset is Men's Training gear, racking up a massive `91,137` in total revenue. It completely blows away every other individual segment on the board. Women's training is also holding up strong at `66,047`, showing that activewear is a huge profit engine across the board.
+* **Kids are Stealing the Show in Running and Lifestyle:** This is a fascinating anomaly. In both the Running and Lifestyle lines, Kids' products are quietly edging out the other segments. Kids' Lifestyle pulled in `71,713` and Kids' Running hit `69,374`, totally crushing the Women's and Men's figures in those same lines. This tells us our marketing for young athletes and casual kidswear is catching on big time, and we should definitely scale up our inventory for these groups.
+* **Soccer is Dominated by Women's Gear:** While Soccer is traditionally viewed as a balanced market, the data shows that Women’s soccer gear brought in `69,160`, beating out Men's (`59,902`) and completely running circles around Kids' soccer, which bottomed out.
+* **Basketball is a Two-Horse Race:** Basketball products are driven almost entirely by Men (`79,501`) and Women (`75,723`), running neck-and-neck, while the Kids' segment barely factors in at just `14,141`.
+
+## Step 3-2: Product performance by region
+
+
+
