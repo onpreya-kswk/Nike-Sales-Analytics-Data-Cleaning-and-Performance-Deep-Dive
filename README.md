@@ -55,7 +55,7 @@ Business takeaway: Double down on Training and Basketball for Men. Running for K
 **SQL:** [3-2_Product Performance by Region.sql](./3-2_Product%20Performance%20by%20Region.sql)
 
 ![Heatmap](./3-2-1_Product%20Performance%20by%20Region.png)
-3-2-2_Product Performance by Region.png
+[3-2-2_Product Performance by Region.png](https://github.com/onpreya-kswk/Nike-Sales-Analytics-Data-Cleaning-and-Performance-Deep-Dive/blob/ecff7a9155eb3caf03913a2dbdb765f20b4c6d09/3-2-2_Product%20Performance%20by%20Region.png)
 
 What this chart tells us: Every region has its own strong product, and no single region dominates everything.
 
