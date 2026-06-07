@@ -9,11 +9,11 @@ The raw transaction data comes from **Kaggle**. It tracks global Nike product sa
 Link : https://www.kaggle.com/datasets/nayakganesh007/nike-sales-uncleaned-dataset
 ---
 
-## SQL Scripts
+
+## Step 1: Data Cleaning & Transformation
 
 **Full SQL:** [Nike_Sales_Cleaned_v2.sql](./Nike_Sales_Cleaned_v2.sql)
 
-## Step 1: Data Cleaning & Transformation
 The goal here was to move everything from `"Nike_Sales_Uncleaned"` into a clean, structured table called `"Nike_Sales_Cleaned"`. The raw data had quite a few data quality issues, so I used this SQL script to standardize the columns:
 
 * **Handling Blank and Null Values:** I used `COALESCE` to quickly patch up missing data, like setting empty sizes to `'No Size'` and unrecorded revenue/regions to fallback defaults. I also added a `WHERE "Order_ID" IS NOT NULL` filter at the bottom because any transaction without an order ID is useless for analysis.
@@ -21,6 +21,10 @@ The goal here was to move everything from `"Nike_Sales_Uncleaned"` into a clean,
 * **Untangling Messy Date Formats:** The `"Order_Date"` column was a mix of different formats (`DD/MM/YYYY` and `DD-MM-YYYY`). To fix this, I used pattern matching (`LIKE '__/__/____'`) to identify the format first, converted it using `TO_DATE`, and then used `TO_CHAR` to lock every single row into a clean, uniform ISO standard (`YYYY-MM-DD`). Anything that couldn't be parsed got flagged with a default fallback date of `'1900-01-01'`.
  
 ## Step 2: Profit vs Discount Relationship
+
+**SQL:** [2_Profit vs Discount Relationship.sql](./2_Profit%20vs%20Discount%20Relationship.sql)
+
+![Profit vs Discount](./2_Profit%20vs%20Discount%20Relationship.png)
 
 What this chart tells us: Bigger discounts mean less profit, especially in Online.
 
@@ -31,6 +35,10 @@ The Retail trend line stays almost flat, which suggests discounts don't hurt Ret
 Business takeaway: Be careful with heavy discounts on Online — they eat directly into profit. Retail can handle discounts better without losing as much on the bottom line.
 
 ## Step 3-1: Product performance by gender
+
+**SQL:** [3-1_Product Performance by Gender.sql](./3-1_Product%20Performance%20by%20Gender.sql)
+
+![Product Performance by Gender](./3-1_Product%20Performance%20by%20Gender.png)
 
 What this chart tells us: Training for Men is the top money-maker, and each product has a different lead gender.
 
@@ -43,6 +51,11 @@ Running is interesting — Kids lead here at 69,974 while Men sit very low at 18
 Business takeaway: Double down on Training and Basketball for Men. Running for Kids is a strong, underrated segment worth paying more attention to.
 
 ## Step 3-2: Product performance by region
+
+**SQL:** [3-2_Product Performance by Region.sql](./3-2_Product%20Performance%20by%20Region.sql)
+
+![Heatmap](./3-2-1_Product%20Performance%20by%20Region.png)
+![Grouped Bar](./3-2-2_Product%20Performance%20by%20Region.png)
 
 What this chart tells us: Every region has its own strong product, and no single region dominates everything.
 
