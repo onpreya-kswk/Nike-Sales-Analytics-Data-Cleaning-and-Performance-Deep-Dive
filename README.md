@@ -17,24 +17,39 @@ The goal here was to move everything from `"Nike_Sales_Uncleaned"` into a clean,
 * **Untangling Messy Date Formats:** The `"Order_Date"` column was a mix of different formats (`DD/MM/YYYY` and `DD-MM-YYYY`). To fix this, I used pattern matching (`LIKE '__/__/____'`) to identify the format first, converted it using `TO_DATE`, and then used `TO_CHAR` to lock every single row into a clean, uniform ISO standard (`YYYY-MM-DD`). Anything that couldn't be parsed got flagged with a default fallback date of `'1900-01-01'`.
  
 ## Step 2: Profit vs Discount Relationship
+
 What this chart tells us: Bigger discounts mean less profit, especially in Online.
+
 The blue trend line (Online) drops much steeper than the orange one (Retail). This means every time we increase a discount on the Online channel, profit takes a bigger hit compared to Retail.
+
 The Retail trend line stays almost flat, which suggests discounts don't hurt Retail profit that much. This could be because Retail already has higher margins built in, or the discount levels are more controlled.
+
 Business takeaway: Be careful with heavy discounts on Online — they eat directly into profit. Retail can handle discounts better without losing as much on the bottom line.
 
 ## Step 3-1: Product performance by gender
+
 What this chart tells us: Training for Men is the top money-maker, and each product has a different lead gender.
+
 Training — Men stands out the most at 91,137, far ahead of every other group. This is clearly the strongest revenue driver in the business right now.
+
 Basketball pulls in strong numbers from both Men (79K) and Women (75K), making it one of the few products that works well across genders.
+
 Running is interesting — Kids lead here at 69,974 while Men sit very low at 18,379. Soccer follows a similar pattern where Women lead (69,160) and Men are near the bottom, which goes against the trend seen in other products.
+
 Business takeaway: Double down on Training and Basketball for Men. Running for Kids is a strong, underrated segment worth paying more attention to.
 
 ## Step 3-2: Product performance by region
+
 What this chart tells us: Every region has its own strong product, and no single region dominates everything.
+
 Hyderabad owns Basketball at 57,272 — no other region comes close. But the same region scores almost nothing in Soccer (3,761), so it's very one-sided.
+
 Kolkata is the most balanced region, doing well in both Lifestyle (53,574) and Training (42,532) without a major weak spot.
+
 Pune is the only region where Soccer performs strongly (43,526). Every other region treats Soccer as a low-priority product, so Pune has a unique customer base worth exploring separately.
+
 Mumbai sits at the bottom across nearly every product. This is worth investigating — whether it's a supply issue, low brand awareness, or just weaker demand in that market.
+
 Business takeaway: Stop using a one-size-fits-all approach. Push Basketball hard in Hyderabad, lead with Lifestyle in Kolkata, and treat Pune as the go-to market for Soccer campaigns.
 
 
