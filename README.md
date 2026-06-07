@@ -71,7 +71,7 @@ Business takeaway: Stop using a one-size-fits-all approach. Push Basketball hard
 
 ## Dashboard
 
-![Nike Sales Dashboard](./Nike_Sales_Dashboard.png)
+![Dashboard](./Dashboard.png)
 
 This dashboard brings together all four analyses into one view.
 
