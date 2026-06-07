@@ -71,17 +71,17 @@ Business takeaway: Stop using a one-size-fits-all approach. Push Basketball hard
 
 ## Dashboard
 
-![Dashboard](./Dashboard.png)
+![Nike_Sales_Dashboard](./Nike_Sales_Dashboard.png)
 
 This dashboard brings together all four analyses into one view.
 
 - **Top left** — Profit vs Discount scatter plot, showing how 
   discounts affect profit differently across Online and Retail
-- **Bottom left** — Product performance by Gender, showing 
+- **Middle left** — Product performance by Gender, showing 
   which gender drives revenue in each product line
-- **Top right** — Product revenue heatmap by Region, 
+- **Middle right** — Product revenue heatmap by Region, 
   highlighting which city × product combinations perform best
-- **Bottom right** — Grouped bar by Region, for a closer look 
+- **Bottom** — Grouped bar by Region, for a closer look 
   at how products compare within each city
 
 Each chart can be used as a filter — clicking on a data point 
