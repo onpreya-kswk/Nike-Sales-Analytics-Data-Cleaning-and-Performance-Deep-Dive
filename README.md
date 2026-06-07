@@ -9,6 +9,10 @@ The raw transaction data comes from **Kaggle**. It tracks global Nike product sa
 Link : https://www.kaggle.com/datasets/nayakganesh007/nike-sales-uncleaned-dataset
 ---
 
+## SQL Scripts
+
+**Full SQL:** [Nike_Sales_Cleaned_v2.sql](./Nike_Sales_Cleaned_v2.sql)
+
 ## Step 1: Data Cleaning & Transformation
 The goal here was to move everything from `"Nike_Sales_Uncleaned"` into a clean, structured table called `"Nike_Sales_Cleaned"`. The raw data had quite a few data quality issues, so I used this SQL script to standardize the columns:
 
