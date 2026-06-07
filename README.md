@@ -69,6 +69,22 @@ Mumbai sits at the bottom across nearly every product. This is worth investigati
 
 Business takeaway: Stop using a one-size-fits-all approach. Push Basketball hard in Hyderabad, lead with Lifestyle in Kolkata, and treat Pune as the go-to market for Soccer campaigns.
 
+## Dashboard
 
+![Nike Sales Dashboard](./Nike_Sales_Dashboard.png)
+
+This dashboard brings together all four analyses into one view.
+
+- **Top left** — Profit vs Discount scatter plot, showing how 
+  discounts affect profit differently across Online and Retail
+- **Bottom left** — Product performance by Gender, showing 
+  which gender drives revenue in each product line
+- **Top right** — Product revenue heatmap by Region, 
+  highlighting which city × product combinations perform best
+- **Bottom right** — Grouped bar by Region, for a closer look 
+  at how products compare within each city
+
+Each chart can be used as a filter — clicking on a data point 
+updates the rest of the dashboard automatically.
 
 
